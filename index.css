@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5vw;
+    height: 100vh;
+    font-size: 1.1rem;
+    flex-wrap: wrap; /* Allows wrapping on small screens */
+}
+
+.left-content,
+.right-content {
+    width: 50%; /* Both content sections take 50% of the width in desktop mode */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left-content {
+    color: #ffffff;
+    text-align: center; /* Center the text */
+}
+
+.left-content h4 {
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.left-content h1 {
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 1.2;
+}
+
+.left-content h1 span {
+    color: #9c27b0;
+}
+
+.outer-box {
+    width: 320px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(33, 33, 33, 0.9);
+    border-radius: 12px;
+    border: 1px solid #444;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    margin-top: 2rem;
+}
+
+.circle {
+    height: 220px;
+    width: 220px;
+    background-color: #282828;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    border: 3px solid #444;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.circle p {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #fff;
+    background-color: transparent;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    background-color: transparent;
+    margin-top: 15px;
+}
+
+button {
+    padding: 10px 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #333;
+    color: #fff;
+    border: 2px solid #555;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: #444;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#startStopButton {
+    background-color: #3e8e41;
+    border-color: #356b35;
+}
+
+
+#pauseButton {
+    background-color: rgba(142, 87, 213, 0.795);
+}
+
+#resetButton {
+    background-color: #d32f2f;
+    border-color: #c62828;
+}
+
+/* Media Query for tablets and below */
+@media screen and (max-width: 1024px) {
+    .content {
+        flex-direction: column;
+        padding: 0;
+    }
+    .outer-box {
+        width: 80%;
+        padding: 1.2rem;
+        margin: 10px 0;
+    }
+    .left-content h4 {
+        font-size: 1.1rem;
+    }
+    .left-content h1 {
+        font-size: 2.2rem;
+    }
+    .circle {
+        height: 200px;
+        width: 200px;
+    }
+    .circle p {
+        font-size: 2.2rem;
+    }
+}
+
+/* Media Query for phones and below */
+@media screen and (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+    .outer-box {
+        width: 90%;
+        height: auto;
+        padding: 1rem;
+    }
+    .left-content h4 {
+        font-size: 1.3rem;
+    }
+    .left-content h1 {
+        font-size: 2rem;
+    }
+    .circle {
+        height: 180px;
+        width: 180px;
+    }
+    .circle p {
+        font-size: 2rem;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+
+/* Media Query for very small screens (phones) */
+@media screen and (max-width: 480px) {
+    .left-content h4 {
+        font-size: 1rem;
+    }
+    .left-content h1 {
+        font-size: 1.6rem;
+    }
+    .circle {
+        height: 160px;
+        width: 160px;
+    }
+    .circle p {
+        font-size: 1.8rem;
+    }
+    button {
+        padding: 8px 15px;
+        font-size: 1rem;
+    }
+}
